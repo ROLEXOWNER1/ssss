@@ -148,11 +148,10 @@ def create_inline_keyboard():
         url="https://t.me/addlist/CPsCiscEV1tlNDY1"
     )
     
-    # Add both buttons to the markup
+    # Add both buttons to the markup (this will place them vertically by default)
     markup.add(button1, button2)
     
     return markup
-
 
 
 def extend_and_clean_expired_users():
