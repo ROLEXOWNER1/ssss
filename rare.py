@@ -20,9 +20,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '8001042691:AAHKyGO2MwjXtkHC8jz73PsM_inTW7EL56I'
 MONGO_URI = 'mongodb+srv://rolex:rolex@rolexowner.csjfh.mongodb.net/?retryWrites=true&w=majority&appName=ROLEXOWNER'
-FORWARD_CHANNEL_ID = -1002416276521
-CHANNEL_ID = -1002416276521
-error_channel_id = -1002416276521
+FORWARD_CHANNEL_ID = -4704336210
+CHANNEL_ID = -4704336210
+error_channel_id = -4704336210
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -134,22 +134,28 @@ async def start_asyncio_loop():
         
 def create_inline_keyboard():
     # Create an instance of InlineKeyboardMarkup
-    markup = types.InlineKeyboardMarkup()
+    markup = types.InlineKeyboardMarkup(row_width=1)  # row_width=1 forces buttons to stack vertically
     
     # First button
     button1 = types.InlineKeyboardButton(
-        text="‣ 𝐑 𝐀 𝐑 𝐄  ×  𝐎 𝐖 𝐍 𝐄 𝐑 稀有 ★", 
+        text="‣ 𝐂 𝐎 𝐍 𝐓 𝐀 𝐂 𝐓  𝐎 𝐖 𝐍 𝐄 𝐑 稀有 ★", 
         url="https://t.me/RARExOWNER"
     )
     
     # Second button
     button2 = types.InlineKeyboardButton(
-        text="⛦ 𝐈𝐌𝐏𝐎𝐑𝐓𝐀𝐍𝐓 ★", 
-        url="https://t.me/addlist/CPsCiscEV1tlNDY1"
+        text="⛦ 𝗦𝗜𝗚Σ𝗔𝗗𝗢𝗫 • [🜲] • 🇮🇳 ★", 
+        url="https://t.me/SIGMADOX0"
+    )
+
+    # third button
+    button3 = types.InlineKeyboardButton(
+        text="‣ 𝐑 𝐀 𝐑 𝐄  ×  𝐈 𝐌 𝐏 稀有 ★", 
+        url="https://t.me/addlist/xnssgKZKMc44OGU9"
     )
     
-    # Add both buttons to the markup (this will place them vertically by default)
-    markup.add(button1, button2)
+    # Add both buttons vertically to the markup
+    markup.add(button1, button2, button3)
     
     return markup
 
@@ -518,7 +524,7 @@ def myinfo_command(message):
             button1 = types.InlineKeyboardButton(text="☣️ 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗢𝘄𝗻𝗲𝗿 ☣️",
                                                  url="https://t.me/RARExOWNER")
             button2 = types.InlineKeyboardButton(
-                text="💸 𝗣𝗿𝗶𝗰𝗲 𝗟𝗶𝘀𝘁 💸", url="https://t.me/RARECRACKS/120")
+                text="💸 𝗣𝗿𝗶𝗰𝗲 𝗟𝗶𝘀𝘁 💸", url="https://t.me/rareddos/18685")
             markup.add(button1)
             markup.add(button2)
         else:
@@ -549,24 +555,27 @@ def myinfo_command(message):
 
 @bot.message_handler(commands=['rules'])
 def rules_command(message):
-    rules_text = (
-        "*📜 Bot Rules - Keep It Cool!\n\n"
-        "1. No spamming attacks! ⛔ \nRest for 5-6 matches between DDOS.\n\n"
-        "2. Limit your kills! 🔫 \nStay under 30-40 kills to keep it fair.\n\n"
-        "3. Play smart! 🎮 \nAvoid reports and stay low-key.\n\n"
-        "4. No mods allowed! 🚫 \nUsing hacked files will get you banned.\n\n"
-        "5. Be respectful! 🤝 \nKeep communication friendly and fun.\n\n"
-        "6. Report issues! 🛡️ \nMessage TO Owner for any problems.\n\n"
-        "💡 Follow the rules and let’s enjoy gaming together!*"
-    )
-
     try:
-        bot.send_message(message.chat.id, rules_text, reply_markup=create_inline_keyboard(), parse_mode='Markdown')
+        # Send the video first
+        bot.send_video(
+            message.chat.id,
+            "https://t.me/PIROxSIGMA/21",
+            caption=(
+                "*📜 Bot Rules - Keep It Cool!*\n\n"
+                "1. No spamming attacks! ⛔ \nRest for 5-6 matches between DDOS.\n\n"
+                "2. Limit your kills! 🔫 \nStay under 30-40 kills to keep it fair.\n\n"
+                "3. Play smart! 🎮 \nAvoid reports and stay low-key.\n\n"
+                "4. No mods allowed! 🚫 \nUsing hacked files will get you banned.\n\n"
+                "5. Be respectful! 🤝 \nKeep communication friendly and fun.\n\n"
+                "6. Report issues! 🛡️ \nMessage TO Owner for any problems.\n\n"
+                "*💡 Follow the rules and let’s enjoy gaming together!*"
+            ),
+            parse_mode='Markdown',
+            reply_markup=create_inline_keyboard()
+        )
     except Exception as e:
         print(f"Error while processing /rules command: {e}")
 
-    except Exception as e:
-        print(f"Error while processing /rules command: {e}")
 
 
 @bot.message_handler(commands=['help'])
@@ -590,28 +599,44 @@ def help_command(message):
 
 @bot.message_handler(commands=['owner'])
 def owner_command(message):
-    response = (
-        "*👤 **Owner Information:**\n\n"
-        "For any inquiries, support, or collaboration opportunities, don't hesitate to reach out to the owner:\n\n"
-        "📩 **Telegram:** @RARExOWNER"
-        "💬 **We value your feedback!** Your thoughts and suggestions are crucial for improving our service and enhancing your experience.\n\n"
-        "🌟 **Thank you for being a part of our community!** Your support means the world to us, and we’re always here to help!*\n"
+    # Sending the video first
+    bot.send_video(
+        message.chat.id,
+        "https://t.me/PIROxSIGMA/19",
+        caption=(
+            "*👤 **Owner Information:**\n\n"
+            "For any inquiries, support, or collaboration opportunities, don't hesitate to reach out to the owner:\n\n"
+            "📩 **Telegram:** @RARExOWNER\n"
+            "💬 **We value your feedback!** Your thoughts and suggestions are crucial for improving our service and enhancing your experience.\n\n"
+            "🌟 **Thank you for being a part of our community!** Your support means the world to us, and we’re always here to help!*\n"
+        ),
+        parse_mode='Markdown',
+        reply_markup=create_inline_keyboard()
     )
-    bot.send_message(message.chat.id, response, reply_markup=create_inline_keyboard(), parse_mode='Markdown')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
     try:
-        bot.send_message(message.chat.id, "*🌍 WELCOME TO RARE DDOS WORLD!* 🎉\n\n"
-                                           "*🚀 Get ready to dive into the action!*\n\n"
-                                           "*💣 To unleash your power, use the* `/attack` *command followed by your target's IP and port.* ⚔️\n\n"
-                                           "*🔍 Example: After* `/attack`, *enter:* `ip port duration`.\n\n"
-                                           "*🔥 Ensure your target is locked in before you strike!*\n\n"
-                                           "*📚 New around here? Check out the* `/help` *command to discover all my capabilities.* 📜\n\n"
-                                           "*⚠️ Remember, with great power comes great responsibility! Use it wisely... or let the chaos reign!* 😈💥", 
-                                           reply_markup=create_inline_keyboard(), parse_mode='Markdown')
+        # Send the video first
+        bot.send_video(
+            message.chat.id,
+            "https://t.me/PIROxSIGMA/20",
+            caption=(
+                "*🌍 WELCOME TO RARE DDOS WORLD!* 🎉\n\n"
+                "*🚀 Get ready to dive into the action!*\n\n"
+                "*💣 To unleash your power, use the* `/attack` *command followed by your target's IP and port.* ⚔️\n\n"
+                "*🔍 Example: After* `/attack`, *enter:* `ip port duration`.\n\n"
+                "*🔥 Ensure your target is locked in before you strike!*\n\n"
+                "*📚 New around here? Check out the* `/help` *command to discover all my capabilities.* 📜\n\n"
+                "*⚠️ Remember, with great power comes great responsibility! Use it wisely... or let the chaos reign!* 😈💥"
+                "*⚠️ TO NEED FREE DDOS GO TO THIS BOT = @DDOS_ATTACKxBOT* 😈💥"
+            ),
+            parse_mode='Markdown',
+            reply_markup=create_inline_keyboard()
+        )
     except Exception as e:
         print(f"Error while processing /start command: {e}")
+
         
 @bot.message_handler(commands=['canary'])
 def canary_command(message):
