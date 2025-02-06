@@ -20,9 +20,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '7382333089:AAEeFR6Wb2zYKnmKbgH75HKHEg5xvVQBhsI'
 MONGO_URI = 'mongodb+srv://rolex:rolex@rolexowner.csjfh.mongodb.net/?retryWrites=true&w=majority&appName=ROLEXOWNER'
-FORWARD_CHANNEL_ID = -1002264116636
-CHANNEL_ID = -1002264116636
-error_channel_id = -1002264116636
+FORWARD_CHANNEL_ID = -4617579734
+CHANNEL_ID = -4617579734
+error_channel_id = -4617579734
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
