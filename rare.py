@@ -18,11 +18,11 @@ import psutil
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '8001042691:AAHKyGO2MwjXtkHC8jz73PsM_inTW7EL56I'
+TOKEN = '7382333089:AAEeFR6Wb2zYKnmKbgH75HKHEg5xvVQBhsI'
 MONGO_URI = 'mongodb+srv://rolex:rolex@rolexowner.csjfh.mongodb.net/?retryWrites=true&w=majority&appName=ROLEXOWNER'
-FORWARD_CHANNEL_ID = -4704336210
-CHANNEL_ID = -4704336210
-error_channel_id = -4704336210
+FORWARD_CHANNEL_ID = -1002264116636
+CHANNEL_ID = -1002264116636
+error_channel_id = -1002264116636
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -151,7 +151,7 @@ def create_inline_keyboard():
     # third button
     button3 = types.InlineKeyboardButton(
         text="‣ 𝐑 𝐀 𝐑 𝐄  ×  𝐈 𝐌 𝐏 稀有 ★", 
-        url="https://t.me/addlist/xnssgKZKMc44OGU9"
+        url="https://t.me/addlist/bBvLJHnLjFpiYzE9"
     )
     
     # Add both buttons vertically to the markup
@@ -524,7 +524,7 @@ def myinfo_command(message):
             button1 = types.InlineKeyboardButton(text="☣️ 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗢𝘄𝗻𝗲𝗿 ☣️",
                                                  url="https://t.me/RARExOWNER")
             button2 = types.InlineKeyboardButton(
-                text="💸 𝗣𝗿𝗶𝗰𝗲 𝗟𝗶𝘀𝘁 💸", url="https://t.me/rareddos/18685")
+                text="💸 𝗣𝗿𝗶𝗰𝗲 𝗟𝗶𝘀𝘁 💸", url="https://t.me/RARExOWNER ")
             markup.add(button1)
             markup.add(button2)
         else:
@@ -543,7 +543,7 @@ def myinfo_command(message):
             )
             markup = types.InlineKeyboardMarkup()
             button = types.InlineKeyboardButton(
-                text="🔥 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🔥", url="https://t.me/RARECRACKS")
+                text="🔥 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🔥", url="https://t.me/+jwemRpo0wvplYTll")
             markup.add(button)
 
         bot.send_message(message.chat.id,
@@ -620,7 +620,7 @@ def start_message(message):
         # Send the video first
         bot.send_video(
             message.chat.id,
-            "https://t.me/PIROxSIGMA/20",
+            "https://t.me/RARExCRACKS/26",
             caption=(
                 "*🌍 WELCOME TO RARE DDOS WORLD!* 🎉\n\n"
                 "*🚀 Get ready to dive into the action!*\n\n"
@@ -648,7 +648,7 @@ def canary_command(message):
     markup = types.InlineKeyboardMarkup()
     button1 = types.InlineKeyboardButton(
         text="📱 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗙𝗼𝗿 𝗔𝗻𝗱𝗿𝗼𝗶𝗱 📱",
-        url="https://t.me/rarepublicschat/862")
+        url="https://t.me/c/2276354744/138")
     button2 = types.InlineKeyboardButton(
         text="🍎 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗳𝗼𝗿 𝗶𝗢𝗦 🍎",
         url="https://apps.apple.com/in/app/surge-5/id1442620678")
