@@ -543,7 +543,7 @@ def myinfo_command(message):
             )
             markup = types.InlineKeyboardMarkup()
             button = types.InlineKeyboardButton(
-                text="🔥 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🔥", url="https://t.me/+jwemRpo0wvplYTll")
+                text="🔥 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🔥", url="https://t.me/RARExCRACKS")
             markup.add(button)
 
         bot.send_message(message.chat.id,
@@ -620,7 +620,7 @@ def start_message(message):
         # Send the video first
         bot.send_video(
             message.chat.id,
-            "https://t.me/RARExCRACKS/26",
+            "https://t.me/RARExCRACKSA/26",
             caption=(
                 "*🌍 WELCOME TO RARE DDOS WORLD!* 🎉\n\n"
                 "*🚀 Get ready to dive into the action!*\n\n"
